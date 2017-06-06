@@ -1,0 +1,29 @@
+package hb.asserts;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TestAssertions {
+
+	@Test
+	public void testEmptyBuffer() {
+		StringBuffer sb = new StringBuffer();
+		String stringBuffer = sb.toString();
+		int length = sb.length();
+		
+		assertTrue(stringBuffer.equals(""));
+		assertTrue(length == 0);
+	}
+	
+	public void testFullBuffer() {
+		StringBuffer buffer = new StringBuffer("c'est cool junit");
+		
+		String stringBuffer = buffer.toString();
+		int length = stringBuffer.length();
+		
+		assertFalse(stringBuffer.equals(""));
+		assertFalse(length == 0);
+	}
+
+}

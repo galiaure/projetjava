@@ -1,0 +1,52 @@
+package hb.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+
+import hb.projo.User;
+
+@Path("/webservice")
+public class HelloController {
+	List<User> Users = new ArrayList<User>();
+	
+	User u1 = new User("Quentin","Grouleaud",26);
+	Users.add(u1);
+	User u2 = new User("Cynthia","Louis",22);
+	User u3 = new User("Gerard","Dubois",55);
+	
+	
+	
+	
+	@GET
+	@Path("/hello")
+	@Produces("text/plain")
+	public String hello(){
+		return "Hello World!!! C'est Quentin";
+	}
+
+	@GET
+	@Path("/message/{message}")
+	@Produces("text/plain")
+	public String showMsg(@PathParam("message") String message){
+		return message;
+	}
+	
+	@GET
+	@Path("/message/{User}")
+	@Produces("text/plain")
+	public List<String> getUserList(){
+		
+		for(User U:Users){
+			System.out.println(U.getName());
+		}
+		return Users;
+	}
+	
+	
+	
+}

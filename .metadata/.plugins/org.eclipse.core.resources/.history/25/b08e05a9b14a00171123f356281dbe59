@@ -1,0 +1,21 @@
+package hb.pojos;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "satellite")
+public class Satellite {
+	private int id;
+	private String name;
+	private int idplanet;
+	
+	public Satellite(){
+		
+	}
+	
+	public Satellite(int id, String name, int idplanet){
+		this.id = id;
+		this.name = name;
+		this.idplanet = idplanet;
+		
+	}
+}

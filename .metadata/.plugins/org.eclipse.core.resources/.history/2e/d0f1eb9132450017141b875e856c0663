@@ -1,0 +1,84 @@
+package com.humanbooster.junit.test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.humanbooster.jdbc.managers.UserManager;
+import com.humanbooster.jdbc.objects.User;
+import com.humanbooster.jdbc.utils.DataConnect;
+
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+public class UserManagerTestSuite extends TestCase {
+	
+	//attributs
+	private UserManager userManager;
+	private Connection connection;
+	private User userForTest;
+	
+	public UserManagerTestSuite (String testName){
+		super(testName);
+		try{
+			connection = DataConnect.getConnection();
+			userManager = new UserManager (connection);
+			
+			userForTest = new User("denis","toudou");
+		}catch (SQLException | ClassNotFoundException e){
+			e.printStackTrace();
+		}
+	}
+	
+	//CONSTRUCTEUR
+	public void testGetUser(){
+		User user = userManager.getUser(userForTest.getLogin());
+		assertNotNull(user);
+		assertTrue(user.getLogin().equals("test"));
+		assertTrue(user.getPassword().equals("toutoutoutou"));
+	}
+	
+	public void testCreateUser(){
+		int numberOfUsersBeforeCreation = userManager.getNumberOfUser();
+		boolean isCreated = userManager.createUser(new User("safinette","safinette"));
+		assertTrue(isCreated);
+		int numberOfUsersAfterCreation = userManager.getNumberOfUser();
+		assertEquals(numberOfUsersBeforeCreation+1,numberOfUsersAfterCreation);
+	}
+	
+	public void testUpdateUser(){
+		boolean isUpdated = userManager.updateUser("modifmdp", "safinette");
+		assertTrue(isUpdated);
+		User userBDD = userManager.getUser("safinette");
+		assertTrue(userBDD.getPassword().equals("safinette"));		
+	}
+	
+	public void testDeleteUser(){
+		int numberOfUsersBeforeDelete = userManager.getNumberOfUser();
+		boolean isDelete = userManager.deleteUser("suprime");
+		assertTrue(isDelete);
+		int numberOfUsersAfterDelete = userManager.getNumberOfUser();
+		assertEquals(numberOfUsersBeforeDelete,numberOfUsersAfterDelete+1);
+	}
+	
+	public void runAfterEveryTest() {
+		DataConnect.closeConnection(connection);
+		userManager = null;
+	}
+	
+	public static junit.framework.Test suite() {
+		TestSuite suite = new TestSuite("Test UserManagerTest");
+		suite.addTest(new UserManagerTestSuite("testCreateUser"));
+		suite.addTest(new UserManagerTestSuite("testGetUser"));
+		suite.addTest(new UserManagerTestSuite("testUpdateUser"));
+		suite.addTest(new UserManagerTestSuite("testDeleteUser"));
+		suite.addTest(new UserManagerTestSuite("runAfterEveryTest"));
+		return suite;
+	}
+	
+	
+
+}

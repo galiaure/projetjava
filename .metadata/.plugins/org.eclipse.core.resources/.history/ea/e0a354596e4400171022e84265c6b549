@@ -1,0 +1,35 @@
+package manager;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import object.Basket;
+
+public class BasketManager {
+	private Connection con;
+
+	public BasketManager(Connection con) {
+		this.con = con;
+
+	}
+	
+	public boolean createBasket(Basket basket){
+		String query = "INSERT INTO basket VALUES (?,?,?,?)";
+		boolean isCreated = false;
+		try{
+			PreparedStatement ps = con.prepareStatement(query);
+			ps.setString(1, basket.getBrand());
+			ps.setString(2, basket.getColor());
+			ps.setInt(3, basket.getPrice());
+			ps.setString(4, basket.getLogin());
+			ps.executeUpdate();
+			isCreated=true;
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		return isCreated;
+	}
+	 
+
+}

@@ -1,0 +1,31 @@
+package hb.junits;
+
+import static org.junit.Assert.*;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.Calendar;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import hb.pojos.Flower;
+import hb.services.FlowerService;
+import hb.services.impl.FlowerServiceImpl;
+
+public class FlowerServiceTestUnit {
+	//Atribut
+	private FlowerService flowerService;
+	
+	@Before
+	public void runBeforeEveryTest() {
+		flowerService = new FlowerServiceImpl();
+	}
+	
+	
+	
+	
+	
+
+}

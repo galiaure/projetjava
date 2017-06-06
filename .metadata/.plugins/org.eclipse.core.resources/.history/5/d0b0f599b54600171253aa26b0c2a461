@@ -1,0 +1,31 @@
+package hb.junits;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.WebResource;
+
+public class HelloControllerTest {
+	private Client client;
+	
+	@Before
+	public void init(){
+		client = Client.create();
+	}
+
+	@Test
+	public void testHello() {
+		WebResource helloMsg = client.resource("http://localhost:8080/wsRESTHello/hb/webservice/hello");
+		assertTrue(helloMsg.get(String.class).equals("Hello World!!! C'est Quentin"));
+	}
+	
+	@Test
+	public void testMessage() {
+		WebResource helloMsg = client.resource("http://localhost:8080/wsRESTHello/hb/webservice/toto");
+		assertTrue(helloMsg.get(String.class).equals("toto"));
+	}
+
+}

@@ -1,0 +1,14 @@
+package hb.utils;
+
+public class WordManager {
+	
+	public String reverseString(String args) {
+		String reverseString = "";
+		
+		for (int i = args.length() -1 ; i >=0; i-- ){
+			 reverseString = reverseString.concat(String.valueOf(args.charAt(i)));
+		}
+		return reverseString;
+	}
+
+}

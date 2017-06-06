@@ -1,0 +1,40 @@
+package clients;
+
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import manager.DataConnect;
+import manager.UserManager;
+import object.User;
+
+public class UserClient {
+
+	public static void main(String[] args) {
+		Connection con = null;
+		try{
+			con = DataConnect.getConnection();
+			
+			System.out.println("---------------TEST CONNEXION---------------\n");
+			System.out.println(" Connection: "+con);
+			
+			UserManager um = new UserManager(con);
+			um.createUser(user);
+			
+		}catch(SQLException sqle){
+			sqle.printStackTrace();
+		}catch(ClassNotFoundException cnfe) {
+			cnfe.printStackTrace();
+		}finally{
+			DataConnect.closeConnection(con);
+		}
+		
+
+		
+		User user = new User("test","safinette");
+		System.out.println("----------TEST CREATION----------\n");
+		um.createUser(user);
+
+	}
+
+}

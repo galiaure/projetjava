@@ -1,0 +1,16 @@
+package hb.asserts;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TestAssertions {
+
+	@Test
+	public void testEmptyBuffer() {
+		StringBuffer sb = new StringBuffer();
+		int length = sb.length();
+		assertTrue(length == 0);
+	}
+
+}

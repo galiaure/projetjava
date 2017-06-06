@@ -1,0 +1,10 @@
+package hb.utils;
+
+public class WordManager {
+	
+	public String reverseString(String arg){
+		String word = arg ;
+		return Result;
+	}
+
+}

@@ -1,0 +1,68 @@
+package hb.services.impl;
+
+import java.sql.Connection;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import hb.pojos.Satellite;
+import hb.services.SatelliteService;
+import hb.utils.Consts;
+
+public class SatelliteServiceImpl implements SatelliteService {
+	
+	private Connection con;
+	public SatelliteServiceImpl(Connection con){
+		this.con = con;
+	}
+
+	@Override
+	public List<String> getSatelliteByPlanet(String planetName) {
+		List<String> satellites = null;
+		PreparedStatement ps;
+		try {
+			ps = con.prepareStatement(Consts.GET_SATELLITE_NAME_BY_PLANET_NAME_QUERY);
+			ps.setString(1, planetName);
+			ResultSet rs = ps.executeQuery();
+			satellites = new ArrayList<String>();
+			while(rs.next()){
+				satellites.add(rs.getString("name"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return satellites;
+	}
+	
+	@Override
+	public List<Satellite> getSatelliteObject(){
+		List<Satellite> satellites = null;
+		try {
+			satellites = new ArrayList<Satellite>();
+			Statement s = con.createStatement();
+			ResultSet ps = s.executeQuery(Consts.GET_SATELLITE_OBJECT_QUERY);
+			while(ps.next()){
+				Satellite sa = new Satellite(ps.getInt(1),ps.getString(2),ps.getInt(3));
+				sa.setName(ps.getString(2));
+				satellites.add(sa.getName());
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		int count = 0;
+		String[] namesSatellite;
+		for (Satellite s:satellites)
+		{
+			
+			namesSatellite[count] = s.getName();
+			count++;
+		}
+		return Arrays.toString(namesSatellite);
+	}
+	
+}

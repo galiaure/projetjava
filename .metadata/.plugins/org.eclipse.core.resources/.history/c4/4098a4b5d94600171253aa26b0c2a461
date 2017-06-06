@@ -1,0 +1,68 @@
+package hb.projo;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "animal")
+public class Animal {
+	private String espece;
+	private String habitat;
+	private int number;
+	private int nbpatte;
+	
+	
+	public Animal() {
+		
+	}
+	
+	public Animal(String espece, String habitat, int number, int nbpatte){
+		this.espece=espece;
+		this.habitat=habitat;
+		this.number=number;
+		this.nbpatte=nbpatte;
+		
+	}
+
+	public String getEspece() {
+		return espece;
+	}
+
+	public void setEspece(String espece) {
+		this.espece = espece;
+	}
+
+	public String getHabitat() {
+		return habitat;
+	}
+
+	public void setHabitat(String habitat) {
+		this.habitat = habitat;
+	}
+
+	public int getNumber() {
+		return number;
+	}
+
+	public void setNumber(int number) {
+		this.number = number;
+	}
+
+	public int getNbpatte() {
+		return nbpatte;
+	}
+
+	public void setNbpatte(int nbpatte) {
+		this.nbpatte = nbpatte;
+	}
+
+	@Override
+	public String toString() {
+		return "Animal [espece=" + espece + ", habitat=" + habitat + ", number=" + number + ", nbpatte=" + nbpatte
+				+ "]";
+	}
+	
+	
+
+	
+
+}

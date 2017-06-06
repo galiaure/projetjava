@@ -1,0 +1,62 @@
+package cgi.junits;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import cgi.pojos.WeightRoom;
+import cgi.services.WeightRoomService;
+import cgi.services.impl.WeightRoomServiceImpl;
+public class WeightRoomServiceTest {
+	
+	private WeightRoomService wrs;
+
+	@Before
+	public void runBeforeEveryTest() {
+		WeightRoom<Integer> wr1 = new WeightRoom<Integer>("Basic Fit","3 rue pasteur 69000 Lyon","18/09/2013",80);
+		WeightRoom<String> wr2 = new WeightRoom<String>("Appart Fitness","35 rue de la république 69000 Lyon",
+				"19/10/2014","salle canon");
+		WeightRoom<String> wr3 = new WeightRoom<String>("Elixia","10 rue toto 59000 Lille",
+				"12/05/2012","salle extraordinaire");
+		WeightRoom<Integer> wr4 = new WeightRoom<Integer>("Océa","3 rue de la république 69000 Lyon",
+				"22/03/2012",70);
+		WeightRoom<String> wr5 = new WeightRoom<String>("Lady fitness","90 rue de la république 69000 Lyon",
+				"11/01/2014","salle magique");
+		WeightRoom[] data = new WeightRoom[5];
+		data[0] = wr1;
+		data[1] = wr2;
+		data[2] = wr3;
+		data[3] = wr4;
+		data[4] = wr5;
+		wrs = new WeightRoomServiceImpl(data);
+	}
+	/*
+	@Test
+	public void testGetKeys(){
+		int keys = wrs.getKeys()WeightRoom.getKeys();
+	}
+	 */
+	
+	@Test
+	public void testGetRoomNames(){
+		String roomName = wrs.getRoomNames();
+		System.out.println(roomName);
+		System.out.println(roomName.length());
+		
+		assertEquals(49,roomName.length());
+		assertTrue(roomName.contains("Lady"));
+		assertTrue(roomName.contains("fitness"));
+		assertTrue(roomName.contains("Basic Fit"));
+		assertTrue(roomName.contains("Elixia"));
+		assertTrue(roomName.contains("Océa"));
+		
+	}
+	
+	@Test
+	public void testGetValues(){
+		String roomName = wrs.();
+		System.out.println(roomName);
+	}
+}
+

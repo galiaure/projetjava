@@ -1,0 +1,29 @@
+package hb.projo;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "animal")
+public class Animal {
+	private String espece;
+	private String habitat;
+	private int number;
+	private int nbpatte;
+	
+	
+	public Animal() {
+		
+	}
+	
+	public Animal(String espece, String habitat, int number, int nbpatte){
+		this.espece=espece;
+		this.habitat=habitat;
+		this.number=number;
+		this.nbpatte=nbpatte;
+		
+	}
+	
+
+	
+
+}

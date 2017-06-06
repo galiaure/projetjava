@@ -1,0 +1,10 @@
+package hb.services;
+
+import java.util.List;
+
+public interface SatelliteService {
+	
+	public List<String> getSatelliteByPlanet(String planetName);
+	public List<String> getSatelliteObject();
+
+}

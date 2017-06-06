@@ -1,0 +1,14 @@
+
+isquid:S1854"7Remove this useless assignment to local variable "str".(¿ìÌ×ÿÿÿÿÿ8Á×¹¥Å+HÓRMAJORZBUG
+n
+squid:S106.";Replace this usage of System.out or System.err by a logger.(‹ÃÖ8ÌÅ©¥Å+HÔRMAJORZ
+CODE_SMELL
+asquid:S1481"(Remove this unused "str" local variable.(¿ìÌ×ÿÿÿÿÿ8Á×¹¥Å+HÕRMINORZ
+CODE_SMELL
+Psquid:S1643*"Use a StringBuilder instead.(´‘¢²8ÌÅ©¥Å+HÖRMINORZ
+CODE_SMELL
+n
+squid:S106";Replace this usage of System.out or System.err by a logger.(‹ÃÖ8ÌÅ©¥Å+H×RMAJORZ
+CODE_SMELL
+Psquid:S1643"Use a StringBuilder instead.(¾¨Àå8ÌÅ©¥Å+HØRMINORZ
+CODE_SMELL

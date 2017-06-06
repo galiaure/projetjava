@@ -1,0 +1,18 @@
+package object;
+
+import com.mysql.jdbc.PreparedStatement;
+
+public class UserManager {
+	public boolean createUser(User user){
+		String query = "INSERT INTO user VALUES (?,?)";
+		boolean isCreated = false;
+		try{
+			PreparedStatement ps = con.prepareStatement(query);
+			ps.setString(1, user.getLogin());
+			ps.setString(2, user.getPassword());
+		}
+	}
+
+	
+
+}

@@ -1,0 +1,5 @@
+package hb.asserts;
+
+public class MatcherUser {
+
+}

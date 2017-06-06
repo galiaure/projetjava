@@ -1,0 +1,14 @@
+package hb.asserts;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TestAssertions {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

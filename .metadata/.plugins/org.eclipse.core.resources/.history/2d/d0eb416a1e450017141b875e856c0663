@@ -1,0 +1,50 @@
+package com.humanbooster.junit.test;
+
+import static org.junit.Assert.*;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.humanbooster.jdbc.managers.UserManager;
+import com.humanbooster.jdbc.objects.User;
+import com.humanbooster.jdbc.utils.DataConnect;
+
+public class UserManagerTest {
+	private UserManager userManager;
+	private Connection connection;
+	private User userForTest;
+
+	
+	@Before
+	public void runBeforeEveryTest() {
+		try{
+			connection = DataConnect.getConnection();
+		}catch (SQLException | ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		userManager = new UserManager(connection);
+	}
+	
+	@Test
+	public void testGetUser(){
+		User user = userManager.getUser(userForTest.getLogin());
+		assertNotNull(user);
+		assertTrue(user.getLogin().equals("test"));
+		assertTrue(user.getPassword().equals("tototititata"));
+	}
+	
+	
+	
+	@After
+	public void runAfterEveryTest() {
+		DataConnect.closeConnection(connection);
+		userManager = null;
+	}
+	
+	
+
+}

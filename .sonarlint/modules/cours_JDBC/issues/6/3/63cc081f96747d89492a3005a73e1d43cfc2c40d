@@ -1,0 +1,34 @@
+
+Gsquid:S2095‡"Close this "Statement".(‹½»8„„€¡Å+HÒRBLOCKERZBUG
+Gsquid:S2095ˆ"Close this "ResultSet".(² €í8Ÿİ¢Å+H–RBLOCKERZBUG
+_squid:S1148~"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8„„€¡Å+HÙRMINORZVULNERABILITY
+Ssquid:S2095+"Close this "PreparedStatement".(‹ùµäşÿÿÿÿ8ÃÂ„Å+H¤RBLOCKERZBUG
+Ksquid:S2095>"Close this "ResultSet".(ç®±ùÿÿÿÿ8›Ñ¥Å+HRBLOCKERZBUG
+Ssquid:S2095"Close this "PreparedStatement".(§ÖûÌÿÿÿÿÿ8†¢ë Å+HÄRBLOCKERZBUG
+Rsquid:S11663"%Either log or rethrow this exception.(É®£8„„€¡Å+H×RMAJORZBUG
+_squid:S1148C"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8›Ñ¥Å+HRMINORZVULNERABILITY
+_squid:S1148o"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8†¢ë Å+HÆRMINORZVULNERABILITY
+Rsquid:S1166"%Either log or rethrow this exception.(É®£8Ÿİ¢Å+H—RMAJORZBUG
+Rsquid:S1166O"%Either log or rethrow this exception.(É®£8Ÿİ¢Å+H˜RMAJORZBUG
+“squid:S2293‰"YReplace the type specification in this constructor call with the diamond operator ("<>").(°†Åêúÿÿÿÿ8Ÿİ¢Å+H’RMINORZ
+CODE_SMELL
+Rsquid:S1166`"%Either log or rethrow this exception.(É®£8ÃÂ„Å+H¥RMAJORZBUG
+Ksquid:S2095k"Close this "Statement".(íñéşÿÿÿÿ8›Ñ¥Å+HRBLOCKERZBUG
+_squid:S1148P"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ÿİ¢Å+H™RMINORZVULNERABILITY
+`squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ÿİ¢Å+HšRMINORZVULNERABILITY
+Rsquid:S1166n"%Either log or rethrow this exception.(É®£8‘½º Å+H·RMAJORZBUG
+Wsquid:S1166}"%Either log or rethrow this exception.(Äíàêşÿÿÿÿ8†¢ë Å+HÅRMAJORZBUG
+Fsquid:S2095y"Close this "ResultSet".(Óé¬ö8Ÿİ¢Å+H”RBLOCKERZBUG
+Ssquid:S1166"%Either log or rethrow this exception.(É®£8›Ñ¥Å+HRMAJORZBUG
+_squid:S11484"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8‘½º Å+H¸RMINORZVULNERABILITY
+_squid:S1148a"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8†òÜœÅ+HùRMINORZVULNERABILITY
+_squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÃÂ„Å+H¦RMINORZVULNERABILITY
+Rsquid:S1166B"%Either log or rethrow this exception.(É®£8†òÜœÅ+HøRMAJORZBUG
+Ksquid:S2095="Close this "Statement".(íñéşÿÿÿÿ8‘½º Å+H¶RBLOCKERZBUG
+Ssquid:S2095["Close this "PreparedStatement".(§ÖûÌÿÿÿÿÿ8†òÜœÅ+H÷RBLOCKERZBUG
+Ksquid:S2095x"Close this "Statement".(ùÃ›ßúÿÿÿÿ8Ÿİ¢Å+H•RBLOCKERZBUG
+Ksquid:S2095L"Close this "Statement".(íñéşÿÿÿÿ8Ÿİ¢Å+H“RBLOCKERZBUG
+Gsquid:S2095™"Close this "ResultSet".(² €í8‘°¦£Å+H§RBLOCKERZBUG
+Gsquid:S2095˜"Close this "Statement".(‹½»8‘°¦£Å+H¨RBLOCKERZBUG
+Ssquid:S1166¥"%Either log or rethrow this exception.(É®£8‘°¦£Å+H©RMAJORZBUG
+`squid:S1148¦"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8‘°¦£Å+HªRMINORZVULNERABILITY

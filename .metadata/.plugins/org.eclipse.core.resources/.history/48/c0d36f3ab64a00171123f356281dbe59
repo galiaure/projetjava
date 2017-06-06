@@ -1,0 +1,102 @@
+package hb.controllers;
+
+import java.sql.Connection;
+
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+
+import hb.pojos.Astronaut;
+import hb.pojos.Planet;
+import hb.pojos.StringList;
+import hb.services.AstronautService;
+import hb.services.PlanetService;
+import hb.services.SatelliteService;
+import hb.services.impl.AstronautServiceImpl;
+import hb.services.impl.PlanetServiceImpl;
+import hb.services.impl.SatelliteServiceImpl;
+import hb.utils.DataConnect;
+
+@Path("/webservice")
+public class WebController {
+	
+	private PlanetService ps;
+	private SatelliteService ss;
+	private Connection con;
+	private AstronautService as;
+	
+	public WebController(){
+		con = DataConnect.getConnection();
+		ps = new PlanetServiceImpl(con);
+		ss = new SatelliteServiceImpl(con);
+		as = new AstronautServiceImpl(con);
+	}
+	
+	@GET
+	@Path("/planets")
+	@Produces("application/xml")
+	public List<Planet> listPlanets(){
+		return ps.getPlanets();
+	}
+	
+	@GET
+	@Path("/json/planets/")
+	@Produces("application/json"+ ";charset=utf-8")
+	public List<Planet> listPlanetsJSON(){
+		return ps.getPlanets();
+	}
+	
+	@GET
+	@Path("/json/planetsByType/")
+	@Produces("application/json"+ ";charset=utf-8")
+	public StringList listPlanetsByTypeJSON(@QueryParam("type") String type){
+		return new StringList(ps.findPlanetsByType(type));
+	}
+	
+	@GET
+	@Path("/planetsByType/")
+	@Produces("application/xml")
+	public StringList listPlanetsByType(@QueryParam("type") String type){
+		return new StringList(ps.findPlanetsByType(type));
+	}
+	
+
+	@GET
+	@Path("/satellites")
+	@Produces("application/xml")
+	public StringList listSatellites(@QueryParam("planetName") String planetName){
+		return new StringList(ss.getSatelliteByPlanet(planetName));
+	}
+	
+	@GET
+	@Path("/json/satellites")
+	@Produces("application/json"+ ";charset=utf-8")
+	public StringList listSatellitesJSON(@QueryParam("planetName") String planetName){
+		return new StringList(ss.getSatelliteByPlanet(planetName));
+	}
+	
+	@GET
+	@Path("/json/satellitesObject")
+	@Produces("application/json"+ ";charset=utf-8")
+	public StringList listSatellitesObjectJSON(){
+		return new StringList(ss.getSatelliteObject());
+	}
+	
+	@GET
+    @Produces("application/xml")
+	@Path("/astronaut/{id}")
+    public Object createAstronaut(@PathParam("id")  int id) {
+      Astronaut astronaut = new Astronaut();
+      astronaut.setId(id);
+      astronaut.setAge(32);
+      astronaut.setFirstname("safinette");
+      astronaut.setLastname("gharbi");
+      as.createAstronaut(astronaut);
+      return astronaut ;
+	}
+
+}

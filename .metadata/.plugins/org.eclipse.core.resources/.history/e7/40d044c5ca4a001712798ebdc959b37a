@@ -1,0 +1,9 @@
+package hb.services;
+
+import java.util.List;
+
+
+public class CometService {
+	List<Comet> getComet();
+	List<String> findCometByDate(String type);
+}

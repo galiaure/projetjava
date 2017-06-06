@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;hello.ts&apos; to &apos;angula-web&apos;" description="Move &apos;hello.ts&apos; to &apos;angula-web&apos;" destination="/angula-web" element1="WebContent/hello.ts" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1495095518990" updateReferences="true"/>
+</session>

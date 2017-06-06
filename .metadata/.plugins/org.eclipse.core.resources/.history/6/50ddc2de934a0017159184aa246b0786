@@ -1,0 +1,14 @@
+package hb.services;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+
+import hb.pojos.Astronaut;
+
+public interface AstronautService {
+	
+	public boolean createAstronaut(Astronaut a);
+	
+
+}

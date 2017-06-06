@@ -1,0 +1,15 @@
+package manager;
+
+import java.sql.Connection;
+
+public class BasketManager {
+	private Connection con;
+
+	public BasketManager(Connection con) {
+		this.con = con;
+
+	}
+	
+	 
+
+}

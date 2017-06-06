@@ -1,0 +1,10 @@
+
+_squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¡ƒƒ¢Å+H€RMINORZVULNERABILITY
+_squid:S11482"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÈÌ£¢Å+HŠRMINORZVULNERABILITY
+Ssquid:S2095)"Close this "PreparedStatement".(‹ùµäşÿÿÿÿ8ÈÌ£¢Å+H‡RBLOCKERZBUG
+Rsquid:S1166"%Either log or rethrow this exception.(É®£8¡ƒƒ¢Å+HÿRMAJORZBUG
+Ssquid:S2095"Close this "PreparedStatement".(§ÖûÌÿÿÿÿÿ8¡ƒƒ¢Å+HıRBLOCKERZBUG
+lsquid:S1854.":Remove this useless assignment to local variable "basket".(±×Ûıÿÿÿÿ8±»­¢Å+HRMAJORZBUG
+_squid:S1481%"+Remove this unused "basket" local variable.(ã±ÄÆ8±»­¢Å+HRMINORZ
+CODE_SMELL
+Rsquid:S11661"%Either log or rethrow this exception.(É®£8ÈÌ£¢Å+H‰RMAJORZBUG

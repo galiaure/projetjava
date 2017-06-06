@@ -1,0 +1,52 @@
+
+Wsquid:S11666"%Either log or rethrow this exception.(àöÆœøÿÿÿÿ8ÓäŠšÅ+H¥RMAJORZBUG
+s
+squid:S106!";Replace this usage of System.out or System.err by a logger.(½Ö¦ûÿÿÿÿ8¡×Å+H©RMAJORZ
+CODE_SMELL
+n
+squid:S106'";Replace this usage of System.out or System.err by a logger.(¢Œ•8²­³Å+H•RMAJORZ
+CODE_SMELL
+n
+squid:S106";Replace this usage of System.out or System.err by a logger.(Ÿ±°²8ÓäŠšÅ+H¢RMAJORZ
+CODE_SMELL
+n
+squid:S106&";Replace this usage of System.out or System.err by a logger.(‰˜ùÿ8¡×Å+H¨RMAJORZ
+CODE_SMELL
+s
+squid:S106";Replace this usage of System.out or System.err by a logger.(”Ğ¢Ÿüÿÿÿÿ8„ÇœÅ+HÑRMAJORZ
+CODE_SMELL
+n
+squid:S106+";Replace this usage of System.out or System.err by a logger.(ùÄ›ï8¦ùº Å+H½RMAJORZ
+CODE_SMELL
+s
+squid:S106"";Replace this usage of System.out or System.err by a logger.(™âˆÀûÿÿÿÿ8ßê Å+H«RMAJORZ
+CODE_SMELL
+s
+squid:S106 ";Replace this usage of System.out or System.err by a logger.(•È«„ûÿÿÿÿ8²ó·Å+H—RMAJORZ
+CODE_SMELL
+lsquid:S1118":Add a private constructor to hide the implicit public one.(€ùğ”ÿÿÿÿÿHRMAJORZ
+CODE_SMELL
+s
+squid:S106.";Replace this usage of System.out or System.err by a logger.(‰µ…ìüÿÿÿÿ8³¯¡Å+HâRMAJORZ
+CODE_SMELL
+Wsquid:S11664"%Either log or rethrow this exception.(æÜ×Şøÿÿÿÿ8ÓäŠšÅ+H¤RMAJORZBUG
+bsquid:S1481")Remove this unused "user" local variable.(¥…¢ôøÿÿÿÿ8Ô½Å+H‡RMINORZ
+CODE_SMELL
+^squid:S1481"*Remove this unused "user3" local variable.(É‹ñª8ç°· Å+H²RMINORZ
+CODE_SMELL
+s
+squid:S106(";Replace this usage of System.out or System.err by a logger.(ÜÎÿ¥øÿÿÿÿ8¦ùº Å+H¼RMAJORZ
+CODE_SMELL
+Zsquid:S11487"#Use a logger to log this exception.( ÉùŞ8ÓäŠšÅ+H¦RMINORZVULNERABILITY
+s
+squid:S106*";Replace this usage of System.out or System.err by a logger.(í¢êÛşÿÿÿÿ8û¸ı Å+HÍRMAJORZ
+CODE_SMELL
+s
+squid:S1060";Replace this usage of System.out or System.err by a logger.(ã”•İüÿÿÿÿ8³¯¡Å+HãRMAJORZ
+CODE_SMELL
+n
+squid:S106";Replace this usage of System.out or System.err by a logger.(ÈÀŒÊ8¬–ßÅ+HœRMAJORZ
+CODE_SMELL
+^squid:S1481"*Remove this unused "user2" local variable.(ÏÓ«ô8ëµ¶ Å+H®RMINORZ
+CODE_SMELL
+_squid:S11485"#Use a logger to log this exception.(«È€ıÿÿÿÿ8Ñ‹·šÅ+H²RMINORZVULNERABILITY

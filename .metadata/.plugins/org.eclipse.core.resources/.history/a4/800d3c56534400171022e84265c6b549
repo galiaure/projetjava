@@ -1,0 +1,14 @@
+package manager;
+
+import java.sql.Connection;
+
+public class UserManager {
+	private Connection con;
+	
+	public UserManager(Connection con) {
+		this.con = con;
+	}
+	
+	
+
+}

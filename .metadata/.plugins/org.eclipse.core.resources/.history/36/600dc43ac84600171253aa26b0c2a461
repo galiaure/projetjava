@@ -1,0 +1,52 @@
+package hb.junits;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.WebResource;
+
+import hb.controller.HelloController;
+
+public class HelloControllerTest {
+	private Client client;
+	private HelloController helloController;
+	
+	@Before
+	public void init(){
+		client = Client.create();
+	}
+	
+	@Before
+	public void runBeforeEveryTest() {
+		helloController = new HelloController();
+	}
+	
+	@Test
+	public void testGetUsersName(){
+		String[] names = helloController.getUsersName();
+		System.out.println("-----Test GetUsersName-----");
+		for(String name:names){
+			System.out.println(name);
+		}
+		
+		String[] namesExpected = {"Quentin","Cynthia","Gerard"};
+		assertArrayEquals(namesExpected,names);
+	}
+
+	
+	@Test
+	public void testHello() {
+		WebResource helloMsg = client.resource("http://localhost:8080/wsRESTHello/hb/webservice/hello");
+		assertTrue(helloMsg.get(String.class).equals("Hello World!!! C'est Quentin"));
+	}
+	
+	@Test
+	public void testMessage() {
+		WebResource helloMsg = client.resource("http://localhost:8080/wsRESTHello/hb/webservice/message/toto");
+		assertTrue(helloMsg.get(String.class).equals("toto"));
+	}
+
+}

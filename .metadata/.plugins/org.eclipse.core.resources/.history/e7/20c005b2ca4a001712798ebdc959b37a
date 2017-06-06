@@ -1,0 +1,25 @@
+package hb.pojos;
+
+import java.util.Date;
+
+public class Comet {
+	
+private int id;
+private String designation;
+private String name;
+private Date nextPeripherieDate;
+private Double revolutionPeriod;
+
+public Comet(){
+	
+}
+
+public Comet(int id, String designation,String name,Date nextPeripherieDate, Double revolutionPeriod){
+	this.id = id;
+	this.designation = designation;
+	this.name = name;
+	this.nextPeripherieDate = nextPeripherieDate;
+	this.revolutionPeriod = revolutionPeriod;
+}
+
+}

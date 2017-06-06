@@ -1,0 +1,31 @@
+package hb.services;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+
+import hb.pojos.Astronaut;
+import hb.utils.Consts;
+
+public interface AstronautService {
+	
+	public boolean createAstronaut(Astronaut a);
+	boolean isCreationOk = false;
+	try{
+		PreparedStatement ps = connection.prepareStatement(
+								Consts.CREATE_ASTRONAUT_SERVICE_QUERY);
+		ps.setString(1, Astronaut.getId());
+		ps.setString(2, Astronaut.getAge());
+		ps.setDouble(3, Astronaut.getLastname());
+		ps.setDate(4, Astronaut.getFirstname());
+
+		logger.info(basket.getDate());
+			
+		ps.executeUpdate();
+		isCreationOk = true;
+	}catch(SQLException e){
+		e.printStackTrace();
+	}
+	return isCreationOk;
+
+}

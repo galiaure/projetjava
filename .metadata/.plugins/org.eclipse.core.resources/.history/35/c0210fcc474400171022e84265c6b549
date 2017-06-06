@@ -1,0 +1,26 @@
+package clients;
+
+import com.mysql.jdbc.Connection;
+
+import manager.DataConnect;
+
+public class UserClient {
+
+	public static void main(String[] args) {
+		Connection con = null;
+		try{
+			con = DataConnect.getConnection();
+			
+			System.out.println("---------------TEST CONNEXION---------------\n");
+			System.out.println(" Connection: "+con);
+		}catch(SQLException sqle){
+			sqle.printStackTrace();
+		}catch(ClassNotFoundException cnfe) {
+			cnfe.printStackTrace();
+		}finally{
+			DataConnect.closeConnection(con);
+		}
+
+	}
+
+}

@@ -1,0 +1,32 @@
+package hb.junits;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.WebResource;
+
+
+public class HelloControllerTest {
+	private Client client;
+	
+	@Before
+	public void init(){
+		client = Client.create();
+	}
+	
+	@Test
+	public void testGetUsersName(){
+		WebResource listMsg = client.resource("http://localhost:8080/wsRESTHello/hb/webservice/ListGetEspece");
+		assertTrue(listMsg.get(String.class).equals("[Vache, Poule, Cochon, Canard, Lapin, Loup de garde, Dahu]"));
+	}
+	
+	@Test
+	public void testMessage() {
+		WebResource helloMsg = client.resource("http://localhost:8080/wsRESTHello/hb/webservice/ListAnimalsNameByPaw/2");
+		assertTrue(helloMsg.get(String.class).equals("2"));
+	}
+	
+}

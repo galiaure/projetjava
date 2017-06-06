@@ -1,0 +1,41 @@
+package hb.junits;
+
+import static org.junit.Assert.*;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import hb.pojos.Flower;
+import hb.services.FlowerService;
+import hb.services.impl.FlowerServiceImpl;
+
+public class FlowerServiceTestUnit {
+	//Atribut
+	private FlowerServiceImpl flowerServiceImpl;
+	private Flower flowerForTest;
+
+	public String[] getFlowersName() {
+		String[] names = new String[flowers.size()];
+		int count = 0;
+		for(Flower f:flowers){
+			names[count] = f.getName();
+			count++;
+		}
+		return names;
+	}
+	
+	
+	@Test
+	public void testGetFlowersName(){
+		Flower flower = flowerServiceImpl.getFlowersName(flowerForTest.getName());
+		assertNotNull(flower);
+		assertTrue(user.getLogin().equals("test"));
+		assertTrue(user.getPassword().equals("tototititata"));
+	}
+	
+
+}

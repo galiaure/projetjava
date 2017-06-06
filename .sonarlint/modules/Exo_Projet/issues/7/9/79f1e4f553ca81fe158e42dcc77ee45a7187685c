@@ -1,0 +1,11 @@
+
+Isquid:S1643"Use a StringBuilder instead.(æ®¿ÂH≥RMINORZ
+CODE_SMELL
+Isquid:S1643%"Use a StringBuilder instead.(¥ë¢≤H¥RMINORZ
+CODE_SMELL
+g
+squid:S106";Replace this usage of System.out or System.err by a logger.(ã√Å÷HµRMAJORZ
+CODE_SMELL
+g
+squid:S106)";Replace this usage of System.out or System.err by a logger.(ã√Å÷H∂RMAJORZ
+CODE_SMELL
